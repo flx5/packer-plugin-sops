@@ -5,11 +5,12 @@ import (
 	"github.com/hashicorp/packer-plugin-sdk/plugin"
 	"os"
 	scaffoldingData "packer-plugin-sops/datasource/file"
+	"packer-plugin-sops/version"
 )
 
 func main() {
 	pps := plugin.NewSet()
-	// TODO Set Version
+	pps.SetVersion(version.PluginVersion)
 
 	pps.RegisterDatasource("file", new(scaffoldingData.DataSource))
 	err := pps.Run()
