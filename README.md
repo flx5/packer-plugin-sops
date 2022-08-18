@@ -1,6 +1,5 @@
 # Packer Plugin SOPS
-The `SOPS` multi-component plugin can be used with HashiCorp [Packer](https://www.packer.io)
-to create custom images. For the full list of available features for this plugin see [docs](docs).
+The `SOPS` multi-component plugin can be to decrypt [SOPS](https://github.com/mozilla/sops) files with HashiCorp [Packer](https://www.packer.io). For the full list of available features for this plugin see [docs](docs).
 
 ## Installation
 
