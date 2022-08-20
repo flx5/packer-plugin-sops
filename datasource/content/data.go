@@ -19,8 +19,11 @@ import (
 type Config struct {
 	common.PackerConfig `mapstructure:",squash"`
 
+	// The encrypted content.
 	Content string `mapstructure:"content" required:"true"`
-	Format  string `mapstructure:"format" required:"true"`
+
+	// The format of the encrypted content.
+	Format string `mapstructure:"format" required:"true"`
 
 	ctx interpolate.Context
 }
@@ -30,8 +33,10 @@ type DataSource struct {
 }
 
 type DatasourceOutput struct {
+	// The decrypted content as a byte array.
 	DecryptedRaw []byte `mapstructure:"decrypted_raw"`
-	Decrypted    string `mapstructure:"decrypted"`
+	// The decrypted content as a string.
+	Decrypted string `mapstructure:"decrypted"`
 }
 
 func (d *DataSource) ConfigSpec() hcldec.ObjectSpec {
