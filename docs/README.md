@@ -49,5 +49,5 @@ on [installing a plugin](https://www.packer.io/docs/extending/plugins/#installin
 
 ### Data Sources
 
-- [data source](/docs/datasources/file.mdx) - Decrypt SOPS files
-
+- [file](/docs/datasources/file.mdx) - Decrypt SOPS files
+- [content](/docs/datasources/content.mdx) - Decrypt SOPS content

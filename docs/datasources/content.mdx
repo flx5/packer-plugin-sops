@@ -1,0 +1,35 @@
+---
+description: |
+  The SOPS content data source allows decrypting SOPS encrypted content.
+
+page_title: Content - Data Source
+nav_title: Content
+---
+
+# SOPS Content Data Source
+
+The SOPS content data source allows decrypting SOPS encrypted content.
+
+Basic example of usage:
+
+```hcl
+data "sops-content" "basic-example" {
+  content = file("encrypted.yml")
+  format = "yaml"
+}
+
+# usage example of the data source output
+locals {
+  value         = data.sops-content.basic-example.decrypted
+}
+```
+
+## Configuration Reference
+
+### Required
+
+@include 'datasource/file/Config-required.mdx'
+
+## Output Data
+
+@include 'datasource/file/DatasourceOutput.mdx'
