@@ -1,0 +1,35 @@
+---
+description: |
+  The SOPS file data source allows decrypting a SOPS encrypted file.
+
+page_title: File - Data Source
+nav_title: File
+---
+
+# SOPS File Data Source
+
+The SOPS file datasource provides access to SOPS encrypted secret files.
+
+Basic example of usage:
+
+```hcl
+data "sops-file" "basic-example" {
+  file = "test.yml"
+  format = "yaml"
+}
+
+# usage example of the data source output
+locals {
+  value         = data.sops-file.basic-example.decrypted
+}
+```
+
+## Configuration Reference
+
+### Required
+
+@include 'datasource/file/Config-required.mdx'
+
+## Output Data
+
+@include 'datasource/file/DatasourceOutput.mdx'
