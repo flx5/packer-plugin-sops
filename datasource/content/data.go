@@ -5,6 +5,8 @@ package content
 
 import (
 	"fmt"
+	"github.com/getsops/sops/v3"
+	"github.com/getsops/sops/v3/decrypt"
 	"github.com/hashicorp/hcl/v2/hcldec"
 	"github.com/hashicorp/packer-plugin-sdk/common"
 	"github.com/hashicorp/packer-plugin-sdk/hcl2helper"
@@ -12,8 +14,6 @@ import (
 	"github.com/hashicorp/packer-plugin-sdk/template/config"
 	"github.com/hashicorp/packer-plugin-sdk/template/interpolate"
 	"github.com/zclconf/go-cty/cty"
-	"go.mozilla.org/sops/v3"
-	"go.mozilla.org/sops/v3/decrypt"
 )
 
 type Config struct {
